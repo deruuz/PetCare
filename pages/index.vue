@@ -210,5 +210,23 @@ import { Phone , MoveUpRight } from "lucide-vue-next";
       </div>
     </div>
   </div>
+
+  <div class="flex pt-60 pb-60">
+    <div class="flex-1 p-4 ">
+      <h1 class="text-lg font-mochi">Siapa Kami</h1>
+      <p>
+        Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan anda
+      </p>
+      <h1 class="font-mochi"> Visi Kami</h1>
+      <p>Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan anda</p>
+      <h1 class="font-mochi"> Misi Kami</h1>
+      <p>
+        Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan anda
+      </p>
+    </div>
+    <div class="flex-1 p-4">
+      <img src="@/assets/img/cat&dog.png" alt="cat & dog" >
+    </div>
+  </div>
   <Footer />
 </template>
