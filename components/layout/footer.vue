@@ -2,5 +2,8 @@
 </script>
 
 <template>
-    <img src="@/assets/img/footer.png" alt="footer" >
+    <div class="bg-footer-pattern bg-no-repeat bg-cover w-full h-64">
+        <h1 class="flex justify-center text-white">© Copyright PetCare. All Rights Reserved</h1>
+    </div>
+    
 </template>
