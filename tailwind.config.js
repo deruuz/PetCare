@@ -61,7 +61,7 @@ module.exports = {
       backgroundImage: {
         'vector-pattern': "url('@/assets/img/vector 1.svg')",
         'footer-pattern': "url('@/assets/img/footer.png')",
-        'rectangle-pattern': "url('@/assets/img/rectangle.png')",
+        'rectangle-pattern': "url('@/assets/img/Rectangle.png')",
       },
       borderRadius: {
         xl: "calc(var(--radius) + 4px)",
