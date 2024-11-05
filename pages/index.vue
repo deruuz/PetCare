@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import navbar from "@/components/layout/navbar.vue";
 import Footer from "@/components/layout/footer.vue";
+import ServiceCard from "@/components/layout/servicecard.vue";
+import ProductCard from "@/components/layout/productcard.vue";
+import PriceListCard from "@/components/layout/pricelistcard.vue";
 
 import { Button } from "~/components/ui/button";
 import {
@@ -21,212 +24,286 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-import { Phone , MoveUpRight } from "lucide-vue-next";
-
+import {
+  Phone,
+  MoveUpRight,
+  Star,
+  MoveRight,
+  CircleCheck,
+} from "lucide-vue-next";
 </script>
 
 <template>
   <navbar />
+
+  <!-- Header -->
   <div
     class="relative w-full h-screen bg-vector-pattern bg-no-repeat bg-cover bg-center"
   >
     <div class="flex justify-between min-h-screen px-8">
       <div class="flex-1 p-4">
-        <h1 class="font-mochi text-5xl pt-60">
-          Destinasi Kebahagiaan Untuk Peliharaanmu
+        <h1 class="font-mochi text-txtpurple text-7xl pt-40 ml-10">
+          Destinasi Bahagia Untuk Peliharaanmu
         </h1>
-        <h3 class="font-mochi text-xs text-green-400 py-4">
-          Pusat Kebutuhan Untuk Hewan Peliharaan Anda.<br >
+        <h3
+          class="font-poppins font-bold text-base text-txtgreen py-4 mt-10 ml-10"
+        >
+          Pusat Kebutuhan Untuk Hewan Peliharaan Anda.<br />
           Terbesar, Terlengkap, dan Terpercaya Di Indonesia
         </h3>
-        <div class="flex justify-start items-center space-x-4">
+        <div class="flex justify-start items-center space-x-4 ml-10">
           <div>
-            <Button>Layanan Kami <MoveUpRight /></Button>
+            <Button
+              class="bg-txtpurple rounded-full px-6 py-6 text-base hover:bg-bgpurple"
+              >Layanan Kami <MoveUpRight class="ml-2"
+            /></Button>
           </div>
           <div>
-            <Button>Hubungi Kami <Phone /></Button>
+            <Button
+              class="text-txtgreen border-2 border-txtgreen rounded-full px-6 py-6 text-base hover:text-txtgreen"
+              variant="outline"
+              >Hubungi Kami <Phone class="ml-2"
+            /></Button>
           </div>
         </div>
       </div>
       <div class="flex-1 p-4">
-        <img src="@/assets/img/cat.png" alt="cat" >
-      </div>
-    </div>
-  </div>
-  <div class="pt-10 pb-60">
-    <h1 class="flex justify-center font-mochi text-3xl">Layanan Kami</h1>
-    <div class="flex justfify-between item-center px-8 pt-10">
-      <div class="px-2">
-        <Card class="w-[350px]">
-          <CardHeader>
-            <CardTitle>Create project</CardTitle>
-            <CardDescription
-              >Deploy your new project in one-click.</CardDescription
-            >
-          </CardHeader>
-          <CardContent>
-            <form>
-              <div class="grid items-center w-full gap-4">
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="name">Name</Label>
-                  <Input id="name" placeholder="Name of your project" />
-                </div>
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="framework">Framework</Label>
-                  <Select>
-                    <SelectTrigger id="framework">
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                    <SelectContent position="popper">
-                      <SelectItem value="nuxt"> Nuxt </SelectItem>
-                      <SelectItem value="next"> Next.js </SelectItem>
-                      <SelectItem value="sveltekit"> SvelteKit </SelectItem>
-                      <SelectItem value="astro"> Astro </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </form>
-          </CardContent>
-          <CardFooter class="flex justify-between px-6 pb-6">
-            <Button variant="outline"> Cancel </Button>
-            <Button>Deploy</Button>
-          </CardFooter>
-        </Card>
-      </div>
-      <div class="px-2">
-        <Card class="w-[350px]">
-          <CardHeader>
-            <CardTitle>Create project</CardTitle>
-            <CardDescription
-              >Deploy your new project in one-click.</CardDescription
-            >
-          </CardHeader>
-          <CardContent>
-            <form>
-              <div class="grid items-center w-full gap-4">
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="name">Name</Label>
-                  <Input id="name" placeholder="Name of your project" />
-                </div>
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="framework">Framework</Label>
-                  <Select>
-                    <SelectTrigger id="framework">
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                    <SelectContent position="popper">
-                      <SelectItem value="nuxt"> Nuxt </SelectItem>
-                      <SelectItem value="next"> Next.js </SelectItem>
-                      <SelectItem value="sveltekit"> SvelteKit </SelectItem>
-                      <SelectItem value="astro"> Astro </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </form>
-          </CardContent>
-          <CardFooter class="flex justify-between px-6 pb-6">
-            <Button variant="outline"> Cancel </Button>
-            <Button>Deploy</Button>
-          </CardFooter>
-        </Card>
-      </div>
-      <div class="px-2">
-        <Card class="w-[350px]">
-          <CardHeader>
-            <CardTitle>Create project</CardTitle>
-            <CardDescription
-              >Deploy your new project in one-click.</CardDescription
-            >
-          </CardHeader>
-          <CardContent>
-            <form>
-              <div class="grid items-center w-full gap-4">
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="name">Name</Label>
-                  <Input id="name" placeholder="Name of your project" />
-                </div>
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="framework">Framework</Label>
-                  <Select>
-                    <SelectTrigger id="framework">
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                    <SelectContent position="popper">
-                      <SelectItem value="nuxt"> Nuxt </SelectItem>
-                      <SelectItem value="next"> Next.js </SelectItem>
-                      <SelectItem value="sveltekit"> SvelteKit </SelectItem>
-                      <SelectItem value="astro"> Astro </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </form>
-          </CardContent>
-          <CardFooter class="flex justify-between px-6 pb-6">
-            <Button variant="outline"> Cancel </Button>
-            <Button>Deploy</Button>
-          </CardFooter>
-        </Card>
-      </div>
-      <div class="px-2">
-        <Card class="w-[350px]">
-          <CardHeader>
-            <CardTitle>Create project</CardTitle>
-            <CardDescription
-              >Deploy your new project in one-click.</CardDescription
-            >
-          </CardHeader>
-          <CardContent>
-            <form>
-              <div class="grid items-center w-full gap-4">
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="name">Name</Label>
-                  <Input id="name" placeholder="Name of your project" />
-                </div>
-                <div class="flex flex-col space-y-1.5">
-                  <Label for="framework">Framework</Label>
-                  <Select>
-                    <SelectTrigger id="framework">
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                    <SelectContent position="popper">
-                      <SelectItem value="nuxt"> Nuxt </SelectItem>
-                      <SelectItem value="next"> Next.js </SelectItem>
-                      <SelectItem value="sveltekit"> SvelteKit </SelectItem>
-                      <SelectItem value="astro"> Astro </SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-            </form>
-          </CardContent>
-          <CardFooter class="flex justify-between px-6 pb-6">
-            <Button variant="outline"> Cancel </Button>
-            <Button>Deploy</Button>
-          </CardFooter>
-        </Card>
+        <img
+          class="animate-fade-left animate-once animate-delay-200 animate-ease-out animate-alternate"
+          src="@/assets/img/cat.png"
+          alt="cat"
+        />
       </div>
     </div>
   </div>
 
-  <div class="flex pt-60 pb-60">
-    <div class="flex-1 p-4 ">
-      <h1 class="text-lg font-mochi">Siapa Kami</h1>
-      <p>
-        Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan anda
+  <!-- Main -->
+  <span id="layanan" />
+  <div class="mt-20 mb-32 pt-20 pb-32">
+    <h1 class="flex justify-center font-mochi text-4xl text-txtpurple">
+      Layanan Kami
+    </h1>
+    <div class="flex justfify-between item-center px-8 pt-10">
+      <div class="px-2">
+        <ServiceCard
+          icon-src="@/assets/img/iconcat.png"
+          title="Dokter Hewan"
+          description="Layanan kesehatan hewan peliharaan yang profesional dan terpercaya."
+          button-text="Dapatkan Layanan"
+          image-src="@/assets/img/cap.png"
+        />
+      </div>
+      <div class="px-2">
+        <ServiceCard
+          icon-src="@/assets/img/iconcat.png"
+          title="Pet Hotel"
+          description="Layanan penitipan hewan peliharaan yang nyaman dan aman."
+          button-text="Dapatkan Layanan"
+          image-src="@/assets/img/cap.png"
+        />
+      </div>
+      <div class="px-2">
+        <ServiceCard
+          icon-src="@/assets/img/iconcat.png"
+          title="Groming"
+          description="Layanan perawatan dan kebersihan hewan peliharaan."
+          button-text="Dapatkan Layanan"
+          image-src="@/assets/img/cap.png"
+        />
+      </div>
+      <div class="px-2">
+        <ServiceCard
+          icon-src="@/assets/img/iconcat.png"
+          title="Pet Shop"
+          description="Layanan Kebutuhan hewan peliharaan yang profesional dan terpercaya."
+          button-text="Dapatkan Layanan"
+          image-src="@/assets/img/cap.png"
+        />
+      </div>
+    </div>
+  </div>
+
+  <div class="flex py-10 bg-bggrey place-items-center py-20">
+    <div class="flex-1 p-4 ml-32">
+      <h1 class="text-3xl font-mochi text-txtpurple my-4">Siapa Kami</h1>
+      <p class="font-poppins font-medium">
+        Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk
+        menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan
+        anda
       </p>
-      <h1 class="font-mochi"> Visi Kami</h1>
-      <p>Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan anda</p>
-      <h1 class="font-mochi"> Misi Kami</h1>
-      <p>
-        Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan anda
+      <h1 class="text-3xl font-mochi text-txtpurple my-4">Visi Kami</h1>
+      <p class="font-poppins font-medium">
+        Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk
+        menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan
+        anda
+      </p>
+      <h1 class="text-3xl font-mochi text-txtpurple my-4">Misi Kami</h1>
+      <p class="font-poppins font-medium">
+        Kami adalah sebuah komunitas pecinta hewan yang berkomitmen untuk
+        menyediakan fasilitas kesehatan serta layanan untuk hewan peliharaan
+        anda
       </p>
     </div>
     <div class="flex-1 p-4">
-      <img src="@/assets/img/cat&dog.png" alt="cat & dog" >
+      <img src="@/assets/img/cat&dog.png" alt="cat & dog" />
     </div>
   </div>
+
+  <div class="py-10 mx-20">
+    <div class="flex justify-center">
+      <h1 class="flex justify-center font-mochi text-4xl text-txtpurple">
+        Pets Shop
+      </h1>
+    </div>
+    <div class="flex justify-between px-10">
+      <div>
+        <h2 class="flex justify-center font-mochi text-txtgreen text-lg my-4">
+          Produk Baru
+        </h2>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+      </div>
+      <div>
+        <h2 class="flex justify-center font-mochi text-txtgreen text-lg my-4">
+          Produk Diskon
+        </h2>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+      </div>
+      <div>
+        <h2 class="flex justify-center font-mochi text-txtgreen text-lg my-4">
+          Produk Unggulan
+        </h2>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+        <div>
+          <ProductCard
+            icon-src="@/assets/img/food.png"
+            title="Pedigree Pouch Makanan Basah"
+            button-text="Cek Sekarang"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="flex justify-around bg-bggrey py-20">
+    <div>
+      <PriceListCard
+        title="Regular Groom"
+        price="Rp. 100.000"
+        :services="[
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+        ]"
+        buttonText="Cek Sekarang"
+      />
+    </div>
+    <div>
+      <PriceListCard
+        title="Regular Groom"
+        price="Rp. 100.000"
+        :services="[
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+        ]"
+        buttonText="Cek Sekarang"
+      />
+    </div>
+    <div>
+      <PriceListCard
+        title="Regular Groom"
+        price="Rp. 100.000"
+        :services="[
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+          'Dapatkan Layanan',
+        ]"
+        buttonText="Cek Sekarang"
+      />
+    </div>
+  </div>
+
+  <div class="px-40 py-40 bg-cover bg-no-repeat">
+    <div class="w-full h-64 bg-rectangle-pattern bg-no-repeat bg-contain">
+      <div class="flex justify-between px-20 pt-20 mx-10">
+        <div>
+          <h1 class="flex font-mochi text-white text-5xl">
+            Peliharaan Anda Aman<br />
+            Bersama Kami
+          </h1>
+        </div>
+        <div class="pt-8">
+          <Button
+            class="font-poppins text-txtgreen border-2 border-txtgreen rounded-full px-6 py-6 text-base hover:text-txtgreen"
+            variant="outline"
+            >Hubungi Kami
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <Footer />
 </template>

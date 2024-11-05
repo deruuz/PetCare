@@ -68,14 +68,14 @@
   }
 }
 
-font base{
+/* font base{
   @font-face {
     font-family: 'Mochiy Pop One';
     src: url('@/assets/fonts/MochiyPopOne-Regular.ttf') format('ttf');
     font-weight: normal;
     font-style: normal;
   }
-}
+} */
 
 
 @layer base {
