@@ -59,7 +59,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        'vector-pattern': "url('@/assets/img/vector 1.svg')",
+        'vector-pattern': "url('@/assets/img/Vector 1.svg')",
         'footer-pattern': "url('@/assets/img/footer.png')",
         'rectangle-pattern': "url('@/assets/img/Rectangle.png')",
       },
