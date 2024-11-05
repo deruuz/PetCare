@@ -16,7 +16,7 @@ function scrollToTop() {
   <div class="fixed top-0 left-0 w-full z-50 flex justify-between items-center bg-bgpurple py-4 ">
     <div class="pl-8 flex justify-start">
       <NuxtLink to="/" @click.native="scrollToTop">
-      <img src="@/assets/img/logo.png" alt="logo">
+      <img src="@/assets/img/Logo.png" alt="logo">
     </NuxtLink>
     </div>
     <NavigationMenu>
